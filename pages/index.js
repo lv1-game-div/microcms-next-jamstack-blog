@@ -5,7 +5,6 @@ import styles from "../styles/Home.module.scss";
 // microCMSからブログデータを取得
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });
-  console.log(data);
   return {
     props: {
       blog: data.contents,
