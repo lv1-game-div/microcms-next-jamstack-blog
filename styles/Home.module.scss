@@ -1,0 +1,60 @@
+.main {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.titleIndex {
+  font-size: 20px;
+}
+
+.publishedAtDetail {
+  margin-bottom: 40px;
+}
+
+.publishedAtIndex {
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+
+.list {
+  width: 65%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-color: #90c743;
+}
+
+.post {
+  & > h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  & > h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px 0 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  & > p {
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+  }
+
+  & > ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+
+}
