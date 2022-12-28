@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { client } from "../libs/client";
 import styles from "../styles/Home.module.scss";
+import Image from 'next/image';
 
 // microCMSからブログデータを取得
 export const getStaticProps = async () => {
@@ -14,15 +15,16 @@ export const getStaticProps = async () => {
 
 export default function Home({ blog }) {
   return (
-    <div className={styles.container}>
-      {blog.map((blog) => (
-        <li className={styles.list} key={blog.id}>
-          <Link className={styles.title} href={`blog/${blog.id}`}>
-            {blog.title}
-          </Link>
-          <p className={styles.publishedAtIndex}>記事投稿日：{new Date(blog.publishedAt).toLocaleDateString()}</p>
-        </li>
-      ))}
-    </div>
+      <div className={styles.main}>
+        <h1>Tech Blog</h1>
+        {blog.map((blog) => (
+          <li className={styles.list} key={blog.id}>
+            <Link className={styles.title} href={`blog/${blog.id}`}>
+              {blog.title}
+            </Link>
+            <p className={styles.publishedAtIndex}>記事投稿日：{new Date(blog.publishedAt).toLocaleDateString()}</p>
+          </li>
+        ))}
+      </div>
   );
 }
